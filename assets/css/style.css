@@ -5090,6 +5090,7 @@ label {
 .cs-hero.cs-style1 .cs-hero_text {
   position: relative;
   z-index: 3;
+  bottom: 50px;
 }
 .cs-hero.cs-style1 .cs-slider.cs-style1 {
   position: absolute;
@@ -6089,7 +6090,7 @@ label {
     min-height: 880px;
   }
   .cs-hero.cs-style1 .cs-hero_title {
-    font-size: 100px;
+    font-size: 50px;
   }
   .cs-hero.cs-style3 .cs-hero_title {
     font-size: 80px;
@@ -9609,8 +9610,12 @@ html .ui-button.ui-state-disabled:active {
   border: 1px solid #FF4A17;
 }
 
-
-
+.full-screen-carousel {
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  position: relative;
+  overflow: hidden;
+}
 
 
 
