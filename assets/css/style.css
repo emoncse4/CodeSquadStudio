@@ -9605,7 +9605,7 @@ html .ui-button.ui-state-disabled:active {
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: #000 !important; /* Bright orange color for active and hover states */
+  background: #fff !important; /* Bright orange color for active and hover states */
   border: 1px solid #FF4A17;
 }
 
