@@ -9769,16 +9769,19 @@ html .ui-button.ui-state-disabled:active {
   }
 }
 
+/* Base style for .cs-hobble */
 .cs-hobble {
   opacity: 1;
   transform: scale(1) translateY(0);
   transition: all 0.3s ease-in-out;
 }
 
+/* Staggered animation class */
 .cs-hobble.animate {
   animation: moveEffect 1s ease-in-out forwards;
 }
 
+/* Animation keyframes */
 @keyframes moveEffect {
   0% {
     opacity: 0.5;
@@ -9793,3 +9796,36 @@ html .ui-button.ui-state-disabled:active {
     transform: scale(1) translateY(0); /* Final position */
   }
 }
+
+/* Zoom-in effect on hover */
+.cs-hobble.hovered {
+  transform: scale(2); /* Slight zoom in */
+  transition: transform 0.3s ease; /* Smooth zoom transition */
+  animation: none; /* Temporarily pause animation */
+}
+
+.cs-text_btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none; /* Remove underline from the link */
+  color: inherit; /* Ensure text color matches current style */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+#arrow {
+  animation: moveArrow 1.5s infinite alternate; /* Apply the animation */
+  margin-left: 5px; /* Space between text and arrow */
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0); /* Start at original position */
+  }
+  100% {
+    transform: translateX(5px); /* Move forward slightly */
+  }
+}
+
+
+
+

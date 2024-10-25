@@ -73,6 +73,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1500); // Time should match the CSS animation duration
   }
 
-  // Trigger the animation on load or set a custom trigger like button click
-  setInterval(animateCards, 3000); // Repeat animation every 3 seconds
+  // Trigger the animation on load
+  animateCards();
+
+  // Repeat the animation every 3 seconds
+  setInterval(animateCards, 3000);
+
+  // Add hover event listeners for zoom-in effect
+  cards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      card.classList.add("hovered"); // Add zoom effect on hover
+      card.classList.remove("animate"); // Stop animation during hover
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.classList.remove("hovered"); // Remove zoom effect after hover
+      card.classList.add("animate"); // Resume animation after hover
+    });
+  });
 });
