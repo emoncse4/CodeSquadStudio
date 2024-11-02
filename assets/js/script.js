@@ -92,3 +92,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.fromTo(
+    "#service",
+    { scale: 0 }, // Start at 0% scale
+    {
+      scale: 1, // End at 100% scale
+      duration: 1,
+      scrollTrigger: {
+        trigger: "#service",
+        start: "top 80%", // Start scaling up when the top of the section is at 80% of the viewport
+        end: "top 20%",   // Complete scaling up when the top of the section is at 20% of the viewport
+        scrub: true,      // Smooth scaling based on scroll
+        toggleActions: "play none none reverse", // Reverse the effect when scrolling back up
+      },
+    }
+  );
+});
+
+
